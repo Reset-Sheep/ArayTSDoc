@@ -1,0 +1,19 @@
+:root {
+    --vp-c-brand-1: #3178C6;
+    --vp-c-brand-2: #3178C6;
+    --vp-c-brand-3: #3178C6;
+  }
+  
+  .vp-doc a {
+    text-decoration: none;
+  }
+  
+  .VPHero .image-src {
+    max-width: 200px;
+    height: auto;
+    /* box-shadow: 0 0 20px rgba(49, 120, 198, 0.2),
+                0 0 40px rgba(49, 120, 198, 0.1);
+    border-radius: 10px; */
+    transition: box-shadow 0.3s ease;
+  }
+  
