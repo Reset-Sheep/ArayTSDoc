@@ -4,7 +4,7 @@ export default defineConfig({
   title: 'ArayTS',
   description: 'A Technical Documentation Site',
   base: '/ArayTSDoc/', // 添加这行，ArayTS 替换为你的仓库名
-  
+  lastUpdated: true, // 页面上展示最后更新的时间
   themeConfig: {
     logo: '/logo.png',
     nav: [
@@ -13,7 +13,8 @@ export default defineConfig({
       { text: '算法', link: '/algorithm/' },  // 新增顶部导航
       { text: 'API', link: '/api/' },
     ],
-    
+    // 配置github地址
+    socialLinks: [{ icon: "github", link: "https://github.com/Reset-Sheep/ArayTSDoc" }],
     sidebar: {
       '/guide/': [
         {
@@ -102,9 +103,5 @@ export default defineConfig({
         }
       ]
     },
-
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/your-username/your-repo' }
-    ]
   }
 })
