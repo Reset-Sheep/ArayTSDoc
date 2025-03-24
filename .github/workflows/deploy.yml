@@ -19,19 +19,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4  # 更新到最新的 v4 版本
+        uses: actions/checkout@v4
       
       - name: Setup Node
-        uses: actions/setup-node@v4  # 更新到最新的 v4 版本
+        uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: npm
       
       - name: Setup Pages
-        uses: actions/configure-pages@v4  # 更新到最新的 v4 版本
+        uses: actions/configure-pages@v4
       
       - name: Install dependencies
-        run: npm ci
+        run: |
+          npm ci
+          npm install -g vitepress
       
       - name: Build
         run: npm run docs:build
