@@ -34,8 +34,15 @@ export default defineConfig({
             { text: '时间', link: '/guide/time/' },
             { text: '异步', link: '/guide/async/' },
             { text: '验证', link: '/guide/validator/' },
-            { text: '类型', link: '/guide/type/' },
             { text: '其他工具集', link: '/guide/tools/' },
+          ]
+        },
+        {
+          text: '类型',
+          collapsed: false,
+          items: [
+            { text: '类型工具集合', link: '/guide/type/' },
+            { text: '类型验证', link: '/guide/type/validator/' },
           ]
         },
         {
