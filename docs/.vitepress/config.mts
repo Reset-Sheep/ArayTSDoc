@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: 'ArayTS',
   description: 'A Technical Documentation Site',
-  base: '/ArayTSDoc/', // 添加这行，ArayTS 替换为你的仓库名
+  base: '/ArayTSDoc', // 添加这行，ArayTS 替换为你的仓库名
   lastUpdated: true, // 页面上展示最后更新的时间
   themeConfig: {
     logo: '/logo.png',
