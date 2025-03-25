@@ -26,13 +26,13 @@ features:
   - icon: 🛠️
     title: 实用的工具函数
     details: 模糊搜索过滤、时间日期处理、对象操作工具、文件处理工具等等
-  - icon: 🛠️
+  - icon: 🔓
     title: 开发体验优化
     details: 完整的 TypeScript 类型支持、详尽的文档和示例、零依赖核心功能
-  - icon: 🛠️
+  - icon: 👍
     title: 强大的验证工具
     details: 内置邮箱、手机号验证、灵活的自定义验证规则、链式验证支持
-  - icon: 🛠️
+  - icon: ✅
     title: 易用性
     details: 模块化设计、简洁的 API 设计、支持按需引入
 ---
@@ -46,7 +46,10 @@ features:
 .VPFeatures .container {
   max-width: 1152px !important;
 }
-
+/* .VPImage{
+  width: 100px;
+  height: 100px;
+} */
 .VPFeatures .items {
   display: flex;
   flex-wrap: wrap;
@@ -57,4 +60,5 @@ features:
   width: calc(33.33% - 20px) !important;
   margin: 0 10px 20px !important;
 }
+
 </style>

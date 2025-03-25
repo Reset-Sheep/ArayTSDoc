@@ -1,6 +1,5 @@
 # 验证
-
-`emailValidator.ts` 提供了两个主要的验证函数：
+提供了两个主要的验证函数：
 - `Email(email: string, domains?: string[] | string)`: 用于验证电子邮件地址的格式，并可选地检查域名是否匹配。
 - `Phone(phoneNumber: string, regions?: string | string[])`: 用于验证电话号码是否符合指定国家/地区的格式。
 

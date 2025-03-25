@@ -121,6 +121,133 @@ console.log(DateUtils.getDateRange('2025-03-21', '2025-03-25'));
 console.log(DateUtils.getRelativeTime(new Date())); // 刚刚
 console.log(DateUtils.getRelativeTime('2025-03-19')); // 2 天前
 ```
+## `startOfDay`
+
+**作用：**  
+获取指定日期的开始时间，即 `00:00:00.000`。
+
+**示例：**  
+```ts
+console.log(DateUtils.startOfDay(new Date())); 
+// 输出示例：2025-03-21T00:00:00.000Z
+```
+
+
+
+## `endOfDay`
+
+**作用：**  
+获取指定日期的结束时间，即 `23:59:59.999`。
+
+**示例：**  
+```ts
+console.log(DateUtils.endOfDay(new Date())); 
+// 输出示例：2025-03-21T23:59:59.999Z
+```
+
+
+
+## `startOfMonth`
+
+**作用：**  
+获取指定日期所在月份的第一天，并将时间设为 `00:00:00.000`。
+
+**示例：**  
+```ts
+console.log(DateUtils.startOfMonth(new Date())); 
+// 输出示例：2025-03-01T00:00:00.000Z
+```
+
+
+
+## `endOfMonth`
+
+**作用：**  
+获取指定日期所在月份的最后一天，并将时间设为 `23:59:59.999`。
+
+**示例：**  
+```ts
+console.log(DateUtils.endOfMonth(new Date())); 
+// 输出示例：2025-03-31T23:59:59.999Z
+```
+
+
+
+## `getQuarter`
+
+**作用：**  
+获取指定日期所在的季度（1-4）。
+
+**示例：**  
+```ts
+console.log(DateUtils.getQuarter(new Date())); 
+// 输出示例：1（第一季度）
+```
+
+
+
+## `isWorkday`
+
+**作用：**  
+判断指定日期是否为工作日（周一至周五为 `true`，周末返回 `false`）。
+
+**示例：**  
+```ts
+console.log(DateUtils.isWorkday('2025-03-21')); // true（星期五）
+console.log(DateUtils.isWorkday('2025-03-23')); // false（星期日）
+```
+
+
+
+## `getWorkdayCount`
+
+**作用：**  
+计算两个日期之间的工作日数量（不包括周六、周日）。
+
+**示例：**  
+```ts
+console.log(DateUtils.getWorkdayCount('2025-03-18', '2025-03-24')); 
+// 输出示例：5（如果 18-22 是工作日，23-24 是周末）
+```
+
+
+
+## `startOfWeek`
+
+**作用：**  
+获取指定日期所在周的周一，并将时间设为 `00:00:00.000`。
+
+**示例：**  
+```ts
+console.log(DateUtils.startOfWeek('2025-03-21')); 
+// 输出示例：2025-03-17T00:00:00.000Z（如果 2025-03-21 是周五）
+```
+
+
+
+## `endOfWeek`
+
+**作用：**  
+获取指定日期所在周的周日，并将时间设为 `23:59:59.999`。
+
+**示例：**  
+```ts
+console.log(DateUtils.endOfWeek('2025-03-21')); 
+// 输出示例：2025-03-23T23:59:59.999Z（如果 2025-03-21 是周五）
+```
+
+
+
+## `getAge`
+
+**作用：**  
+计算基于当前日期的年龄（按年份计算）。
+
+**示例：**  
+```ts
+console.log(DateUtils.getAge('2000-03-21')); 
+// 输出示例：25（如果当前是 2025-03-21）
+```
 
 
 

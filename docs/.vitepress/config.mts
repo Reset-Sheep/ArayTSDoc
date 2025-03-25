@@ -11,10 +11,10 @@ export default defineConfig({
       { text: '首页', link: '/' },
       { text: '指南', link: '/guide/' },
       { text: '算法', link: '/algorithm/' },  // 新增顶部导航
-      { text: 'API', link: '/api/' },
+      // { text: 'API', link: '/api/' },
     ],
     // 配置github地址
-    socialLinks: [{ icon: "github", link: "https://github.com/Reset-Sheep/ArayTSDoc" }],
+    socialLinks: [{ icon: "github", link: "https://github.com/Reset-Sheep/ArayTS" }],
     sidebar: {
       '/guide/': [
         {

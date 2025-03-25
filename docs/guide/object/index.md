@@ -111,3 +111,198 @@ console.log(withoutB); // { a: 1, c: 3 }
 const onlyB = ObjectUtils.omit(obj, ['b'], false);
 console.log(onlyB); // { b: 2 }
 ```
+
+## `isEqual`
+
+**作用：**
+比较两个对象是否相等，支持深度比较。
+
+**参数**
+- `obj1`: 第一个对象。
+- `obj2`: 第二个对象。
+
+**返回值：**
+返回 `true` 表示对象相等，`false` 表示不相等。
+
+**示例：**
+```typescript
+console.log(ObjectUtils.isEqual({ a: 1 }, { a: 1 })); // true
+console.log(ObjectUtils.isEqual({ a: 1 }, { a: 2 })); // false
+```
+
+
+
+## `flatten`
+
+**作用：**
+将嵌套对象扁平化，并使用指定的分隔符连接键。
+
+**参数**
+- `obj`: 需要扁平化的对象。
+- `delimiter`: 用于分隔嵌套键的字符串，默认为 `.`。
+- `prefix`: 递归时的前缀，默认 `''`。
+
+**返回值：**
+返回一个扁平化后的对象。
+
+**示例：**
+```typescript
+const obj = { a: { b: { c: 1 } } };
+console.log(ObjectUtils.flatten(obj)); // { 'a.b.c': 1 }
+```
+
+
+
+## `toQueryString`
+
+**作用：**
+将对象转换为 URL 查询字符串。
+
+**参数**
+- `obj`: 需要转换的对象。
+
+**返回值：**
+返回 URL 查询字符串。
+
+**示例：**
+```typescript
+const obj = { a: 1, b: 2 };
+console.log(ObjectUtils.toQueryString(obj)); // "a=1&b=2"
+```
+
+
+
+## `renameKeys`
+
+**作用：**
+重命名对象的属性。
+
+**参数**
+- `obj`: 源对象。
+- `keysMap`: 旧键名与新键名的映射关系。
+
+**返回值：**
+返回一个新对象，其中的属性名称已更改。
+
+**示例：**
+```typescript
+const obj = { a: 1, b: 2 };
+console.log(ObjectUtils.renameKeys(obj, { a: 'x', b: 'y' })); // { x: 1, y: 2 }
+```
+
+
+
+## `filterProperties`
+
+**作用：**
+根据提供的回调函数筛选对象的属性。
+
+**参数**
+- `obj`: 需要筛选的对象。
+- `predicate`: 过滤条件回调，接收属性值和键作为参数。
+
+**返回值：**
+返回筛选后的新对象。
+
+**示例：**
+```typescript
+const obj = { a: 1, b: 2, c: 3 };
+console.log(ObjectUtils.filterProperties(obj, (value) => value > 1)); // { b: 2, c: 3 }
+```
+
+
+
+## `deepMerge`
+
+**作用：**
+深度合并多个对象。
+
+**参数**
+- `target`: 目标对象。
+- `...sources`: 需要合并的源对象。
+
+**返回值：**
+返回合并后的对象。
+
+**示例：**
+```typescript
+const obj1 = { a: 1, b: { c: 2 } };
+const obj2 = { b: { d: 3 } };
+console.log(ObjectUtils.deepMerge(obj1, obj2)); // { a: 1, b: { c: 2, d: 3 } }
+```
+
+
+
+## `toArray`
+
+**作用：**
+将对象转换为键值对数组。
+
+**参数**
+- `obj`: 需要转换的对象。
+
+**返回值：**
+返回一个包含键值对的数组。
+
+**示例：**
+```typescript
+const obj = { a: 1, b: 2 };
+console.log(ObjectUtils.toArray(obj)); // [['a', 1], ['b', 2]]
+```
+
+
+
+## `fromArray`
+
+**作用：**
+将键值对数组转换回对象。
+
+**参数**
+- `arr`: 包含键值对的数组。
+
+**返回值：**
+返回转换后的对象。
+
+**示例：**
+```typescript
+const arr = [['a', 1], ['b', 2]];
+console.log(ObjectUtils.fromArray(arr)); // { a: 1, b: 2 }
+```
+
+
+
+## `sort`
+
+**作用：**
+根据键对对象进行排序。
+
+**参数**
+- `obj`: 需要排序的对象。
+- `compareFn`: 自定义排序函数，默认为按照键名的字母顺序排序。
+
+**返回值：**
+返回排序后的对象。
+
+**示例：**
+```typescript
+const obj = { b: 2, a: 1 };
+console.log(ObjectUtils.sort(obj)); // { a: 1, b: 2 }
+```
+
+## `isObject`
+
+**作用：**
+判断是否为对象。
+
+**参数**
+- `item`: 需要检查的值。
+
+**返回值：**
+如果 `item` 是对象且不是数组，则返回 `true`，否则返回 `false`。
+
+**示例：**
+```typescript
+console.log(ObjectUtils.isObject({})); // true
+console.log(ObjectUtils.isObject([])); // false
+console.log(ObjectUtils.isObject(null)); // false
+```
