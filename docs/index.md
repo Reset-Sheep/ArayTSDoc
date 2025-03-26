@@ -12,9 +12,12 @@ hero:
     - theme: brand
       text: 快速开始
       link: /guide/
+    - theme: brand
+      text: 类型生成工具
+      link: /guide/tool
     - theme: alt
       text: 在 GitHub 上查看
-      link: https://github.com/Reset-Sheep/ArayTSDoc
+      link: https://github.com/Reset-Sheep/ArayTS
 
 features:
   - icon: 📝

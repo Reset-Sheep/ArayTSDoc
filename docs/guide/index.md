@@ -1,40 +1,35 @@
-# 介绍
+# 开始使用
+ArayTS 是一个基于 TypeScript 的现代化开发工具，旨在提供高效、可靠的开发体验。
+## 安装
+> 1.3.12之前是测试版本，现已删除
 
-这是一个使用 VitePress 搭建的技术文档网站。
+使用 npm 安装：
+```bash
+npm install arayts
+```
 
-## 为什么选择这个项目？
+或使用 pnpm：
+```bash
+pnpm add arayts
+```
 
-在这里介绍你的项目特点和优势。
+## 基本使用
+```typescript
+import {ArrayUtils} from "arayts"
 
-## 主要功能
+// 使用示例
+const numbers = [1, 2, 2, 3, 4, 4, 5];
+console.log(ArrayUtils.unique(numbers)); // [1, 2, 3, 4, 5]
+```
 
-- 功能点 1
-- 功能点 2
-- 功能点 3
-- 算法模块：提供常用算法的实现和详细解析
+## 联系我们
 
-根据 ArayTS 的定位和特点，我建议使用以下配色方案：
+- GitHub Issues: [https://github.com/Reset-Sheep/ArayTS/issues](https://github.com/Reset-Sheep/ArayTS/issues)
 
-主色调：`#3178C6`（TypeScript 蓝）
-- 这是 TypeScript 的标志性蓝色
-- 给人可靠、专业、科技感的印象
-- 符合算法工具库的技术属性
 
-辅助色：
-1. `#235A97`（深蓝） - 用于悬停和重点强调
-2. `#F1F6FF`（浅蓝） - 用于背景和次要元素
-3. `#FFFFFF`（纯白） - 用于主要背景
-4. `#2C3E50`（深灰蓝） - 用于文字内容
+## 许可证
 
-强调色：
-- `#61DAFB`（亮蓝） - 用于特殊强调和交互元素
-- `#E6F3FF`（超浅蓝） - 用于卡片背景
+本项目采用 [MIT](https://github.com/Reset-Sheep/ArayTS/blob/HEAD/LICENSE) 许可证。
 
-这个配色方案的优点：
-1. 与 TypeScript 形象保持一致
-2. 专业且不失活力
-3. 适合展示代码和技术内容
-4. 符合现代网站设计趋势
-5. 提供良好的可读性和视觉层次
-
-建议在官网设计时，使用这些颜色来构建清晰的视觉层次，突出重要信息，同时保持整体的专业感和科技感。
+<!-- ## 更新日志
+建议维护一个 CHANGELOG.md 文件，记录每个版本的变更内容。 -->

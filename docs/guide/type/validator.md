@@ -15,7 +15,7 @@
 ### **示例**:
 
 ```typescript
-const validationRules: Record<string, ValidationRule> = {
+const validationRules: any = {
   userId: { type: 'string', required: true },
   age: { type: 'number', required: true, transform: (value: any) => Math.floor(Number(value)) },
   email: { type: 'string', required: false },

@@ -9,7 +9,8 @@ export default defineConfig({
     logo: '/logo.png',
     nav: [
       { text: '首页', link: '/' },
-      { text: '指南', link: '/guide/' },
+      { text: '快速开始', link: '/guide/' },
+      { text: '类型生成工具', link: '/guide/tool/' },
       { text: '算法', link: '/algorithm/' },  // 新增顶部导航
       // { text: 'API', link: '/api/' },
     ],
@@ -20,8 +21,8 @@ export default defineConfig({
         {
           text: '指南',
           items: [
-            { text: '介绍', link: '/guide/' },
-            { text: '快速开始', link: '/guide/getting-started' },
+            { text: '快速开始', link: '/guide/' },
+            { text: 'ArayTS 类型生成工具', link: '/guide/tool/' },
           ]
         },
         {
